@@ -1,0 +1,155 @@
+@import url(deseo.css);
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:radial-gradient(circle at top,#0f3d2e,#021b14);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+/* ❄ NIEVE */
+.snow{
+    position:absolute;
+    width:6px;
+    height:6px;
+    background:white;
+    border-radius:50%;
+    opacity:.8;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    0%{transform:translateY(-10vh)}
+    100%{transform:translateY(110vh)}
+}
+
+/* 🎁 CONTENEDOR 3D */
+.scene{
+    width:340px;
+    height:460px;
+    perspective:1200px;
+}
+
+.card{
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:transform 1.2s;
+}
+
+.scene:hover .card{
+    transform:rotateY(180deg);
+}
+
+/* 🟥 CARAS */
+.face{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+    border-radius:22px;
+    box-shadow:0 0 40px rgba(255,255,255,.25);
+}
+
+/* FRENTE */
+.front{
+    background:linear-gradient(135deg,#b31217,#ff3c3c);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+.front h1{
+    font-size:34px;
+    text-shadow:0 0 15px gold;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1)}
+    50%{transform:scale(1.05)}
+    100%{transform:scale(1)}
+}
+
+.tree{
+    font-size:90px;
+    margin:20px 0;
+    animation:swing 2.5s ease-in-out infinite;
+}
+
+@keyframes swing{
+    0%{transform:rotate(-5deg)}
+    50%{transform:rotate(5deg)}
+    100%{transform:rotate(-5deg)}
+}
+
+.lights{
+    display:flex;
+    gap:10px;
+}
+
+.light{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    animation:blink 1.5s infinite;
+}
+
+.light:nth-child(1){background:red}
+.light:nth-child(2){background:yellow;animation-delay:.3s}
+.light:nth-child(3){background:lime;animation-delay:.6s}
+.light:nth-child(4){background:cyan;animation-delay:.9s}
+
+@keyframes blink{
+    0%,100%{opacity:1}
+    50%{opacity:.3}
+}
+
+/* ATRÁS */
+.back{
+    background:linear-gradient(135deg,#0a5c36,#0e8f5d);
+    transform:rotateY(180deg);
+    color:white;
+    padding:30px;
+    text-align:center;
+}
+
+.back h2{
+    font-size:26px;
+    margin-bottom:20px;
+}
+
+.back p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+.btn{
+    margin-top:25px;
+    padding:12px 24px;
+    border-radius:30px;
+    border:2px solid gold;
+    background:transparent;
+    color:gold;
+    font-size:16px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:gold;
+    color:#0a5c36;
+    box-shadow:0 0 20px gold;
+}

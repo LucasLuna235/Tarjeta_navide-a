@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Feliz Navidad</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<!-- ❄ NIEVE -->
+<script>
+for(let i=0;i<60;i++){
+    let s=document.createElement("div");
+    s.className="snow";
+    s.style.left=Math.random()*100+"vw";
+    s.style.animationDuration=(5+Math.random()*7)+"s";
+    s.style.opacity=Math.random();
+    document.body.appendChild(s);
+}
+</script>
+
+<!-- 🎁 TARJETA -->
+<div class="scene">
+    <div class="card">
+        
+        <div class="face front">
+            <h1>Feliz Navidad</h1>
+            <div class="tree">🎄</div>
+            <div class="lights">
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+                <div class="light"></div>
+            </div>
+            <p style="margin-top:20px;">Pasá el mouse ✨</p>
+        </div>
+
+        <div class="face back" id="back">
+            <h2>🎅 Con cariño</h2>
+            <p>
+                Que esta Navidad<br>
+                ilumine tu vida<br>
+                con amor, paz<br>
+                y nuevos comienzos ✨
+            </p>
+            <button class="btn" id="btn_deseos">🎁 Abrir deseos</button>
+        </div>
+    </div>
+</div>
+<div class="deseo" id="deseos"></div>
+ <script src="deseos.js"></script>
+</body>
+</html>

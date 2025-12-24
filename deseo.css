@@ -1,0 +1,22 @@
+.deseo{
+    width: 500px;
+    height: 300px;
+    background: #ffff;
+    margin-left: -430px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, gold, orange,white,orange, gold);
+    box-shadow: 10px 10px 10px #3d3939; 
+    z-index: 10000;
+    padding: 20px;
+    display: none;
+}
+
+.showCard{
+    transition: all .5s ease;
+    display: block;
+}
+
+.btn_close{
+    border: none;
+}
