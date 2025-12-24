@@ -56,3 +56,26 @@
     transform: scale(1.5) translateY(-60px);
   }
 }
+
+
+/* 📱 MOBILE */
+@media (max-width: 480px){
+
+  .deseo{
+    width: 90vw;
+    max-width: 340px;
+    height: auto;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  #btn_close{
+    width: 100%;
+    margin-top: 15px;
+    font-size: 16px;
+  }
+
+  .star{
+    font-size: 16px;
+  }
+}
