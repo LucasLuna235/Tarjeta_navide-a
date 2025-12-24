@@ -17,6 +17,42 @@
     display: block;
 }
 
-.btn_close{
-    border: none;
+#btn_close{
+    border: 2px solid green;
+    background: red;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+#btn_close:hover{
+    box-shadow: 10px 10px 10px #3d3939;
+    transition: all .5s ease;
+}
+
+
+
+/* ⭐ ESTRELLAS */
+
+.star{
+  position: fixed;
+  font-size: 20px;
+  color: gold;
+  pointer-events: none;
+  z-index: 10001; /* 🔥 MÁS ALTO QUE .deseo */
+  animation: star 1s ease-out forwards;
+}
+
+
+@keyframes star{
+  from{
+    opacity: 1;
+    transform: scale(0);
+  }
+  to{
+    opacity: 0;
+    transform: scale(1.5) translateY(-60px);
+  }
 }
